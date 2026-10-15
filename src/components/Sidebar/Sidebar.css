@@ -1,0 +1,132 @@
+.sidebar {
+  position: fixed;
+  top: 4.25rem;
+  left: 0;
+  bottom: 0;
+  z-index: 90;
+
+  width: 15.5rem;
+  padding: 1.75rem 1rem 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar__heading {
+  margin: 0 0 0.75rem 0.75rem;
+
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.7rem 0.75rem;
+  border-radius: 0.55rem;
+
+  color: var(--muted);
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.sidebar__link:hover {
+  color: var(--text);
+  background: var(--background);
+}
+
+.sidebar__link--active,
+.sidebar__link--active:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.sidebar__link:focus-visible {
+  outline: 0.1rem solid var(--accent);
+  outline-offset: 0.1rem;
+}
+
+.sidebar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  padding: 1rem 0.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.sidebar__footer span:first-child {
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.sidebar__footer span:last-child {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 47.5rem) {
+  .sidebar {
+    box-shadow: 0.75rem 0 1.9rem rgb(0 0 0 / 8%);
+  }
+}
+
+@keyframes sidebar-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sidebar-slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+::view-transition-new(.sidebar-enter) {
+  animation: sidebar-slide-in 250ms ease-out both;
+}
+
+::view-transition-old(.sidebar-exit) {
+  animation: sidebar-slide-out 250ms ease-in both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar__link {
+    transition: none;
+  }
+
+  ::view-transition-new(.sidebar-enter),
+  ::view-transition-old(.sidebar-exit) {
+    animation: none;
+  }
+}

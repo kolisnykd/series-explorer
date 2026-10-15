@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="145 115 225 285" fill="none">
+  <defs>
+    <linearGradient
+      id="topLoopGrad"
+      x1="172"
+      y1="150"
+      x2="355"
+      y2="185"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="45%" stop-color="#9F67F8" />
+      <stop offset="100%" stop-color="#B975F9" />
+    </linearGradient>
+    <linearGradient
+      id="topFoldGrad"
+      x1="176"
+      y1="142"
+      x2="225"
+      y2="215"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#6D44B8" />
+      <stop offset="100%" stop-color="#4C2E85" />
+    </linearGradient>
+    <linearGradient
+      id="botLoopGrad"
+      x1="156"
+      y1="335"
+      x2="335"
+      y2="375"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#464769" />
+      <stop offset="55%" stop-color="#383757" />
+      <stop offset="100%" stop-color="#282640" />
+    </linearGradient>
+    <linearGradient
+      id="botFoldGrad"
+      x1="285"
+      y1="295"
+      x2="340"
+      y2="370"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#232238" />
+      <stop offset="100%" stop-color="#31304D" />
+    </linearGradient>
+    <linearGradient
+      id="mainRibbonGrad"
+      x1="160"
+      y1="170"
+      x2="356"
+      y2="355"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#B975F9" />
+      <stop offset="50%" stop-color="#9661F7" />
+      <stop offset="100%" stop-color="#6E4AE8" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M316 376 C282 396 222 396 184 374 C162 361 152 338 160 318 C168 298 192 292 210 306 C228 320 260 330 290 320 C312 312 328 326 334 348 C338 362 328 370 316 376Z"
+    fill="url(#botLoopGrad)"
+  />
+  <path
+    d="M290 320 C305 314 318 302 320 290 L338 335 C336 355 326 370 316 376 C332 360 330 328 290 320Z"
+    fill="url(#botFoldGrad)"
+  />
+  <path
+    d="M186 142 C222 120 286 120 328 148 C350 162 360 186 350 206 C340 226 314 230 298 214 C280 196 248 186 218 198 C196 206 178 190 174 168 C172 154 178 147 186 142Z"
+    fill="url(#topLoopGrad)"
+  />
+  <path
+    d="M186 142 C174 152 178 182 218 202 L218 220 C182 206 166 176 176 150 C178 146 182 144 186 142Z"
+    fill="url(#topFoldGrad)"
+  />
+  <path
+    d="M186 142 C168 154 178 196 224 214 L296 240 C344 258 362 296 354 334 C348 358 332 370 316 376 C334 364 334 320 286 302 L214 276 C166 258 150 220 158 180 C162 160 174 148 186 142Z"
+    fill="url(#mainRibbonGrad)"
+  />
+</svg>

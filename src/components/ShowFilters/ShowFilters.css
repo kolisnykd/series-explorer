@@ -1,0 +1,122 @@
+.show-filters {
+  min-width: 0;
+}
+
+.show-filters__toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.show-filters__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.show-filters__genre {
+  padding: 0.5rem 0.8rem;
+  border: 0.05rem solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.show-filters__genre:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.show-filters__genre--active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.show-filters__sort {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.show-filters__sort select {
+  max-width: 11.25rem;
+  padding: 0.5rem 0.6rem;
+  border: 0.05rem solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.show-filters__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.show-filters__clear {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: opacity 180ms ease;
+}
+
+.show-filters__clear:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 47.5rem) {
+  .show-filters__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .show-filters__genres {
+    gap: 0.3rem;
+  }
+
+  .show-filters__genre {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .show-filters__sort {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .show-filters__sort select {
+    flex: 1;
+    width: 0;
+    max-width: 13.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .show-filters__genre,
+  .show-filters__clear {
+    transition: none;
+  }
+}
